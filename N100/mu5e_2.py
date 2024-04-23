@@ -19,8 +19,8 @@ from PCF import PCF_L
 from Time import Time
 
 # gillespie parameter
-Nlinker = 50
-ell_tot = 10**3
+Nlinker = 100
+ell_tot = 2*10**3
 kdiff = 0.001
 Energy = -15
 
@@ -64,13 +64,13 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 10**6
+step_tot = 10**7
 #check_steps = 10**2
-initial_check_steps = 10**3
+initial_check_steps = 10**4
 coarse_grained_step = 10**2
-log_base=1.5
+log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N100.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
