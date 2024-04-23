@@ -37,7 +37,7 @@ cluster_arg = tuple([2.67]) # max distance
 MSD_arg = () # no argument 
 ISF_arg = (0.374,10) # q_norm, q_num_sample
 NRG_arg = ()
-PCF_arg = (15,25) # max_distance,numb_bin
+PCF_arg = (15,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
 Time_arg = ()
 
