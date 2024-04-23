@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=Mu5E_2_job
-#SBATCH --output=Mu5E_2_output_%j.txt
-#SBATCH --error=Mu5E_2_error_%j.txt
+#SBATCH --output=logs/Mu5E_2_output_%j.txt
+#SBATCH --error=logs/Mu5E_2_error_%j.txt
 #SBATCH --time=24:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=10
