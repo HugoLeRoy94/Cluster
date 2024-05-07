@@ -20,7 +20,7 @@ from Time import Time
 
 # gillespie parameter
 Nlinker = 100
-ell_tot = 10**3
+ell_tot = 10**4
 kdiff = 0.001
 Energy = -15
 
@@ -33,9 +33,9 @@ seeds = list(seeds)
 args = [[ell_tot,Energy,kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
 
 # argument of the different classes
-cluster_arg = tuple([2.58]) # max distance
+cluster_arg = tuple([2.67]) # max distance
 MSD_arg = () # no argument 
-ISF_arg = (0.5,10) # q_norm, q_num_sample
+ISF_arg = (0.374,10) # q_norm, q_num_sample
 NRG_arg = ()
 PCF_arg = (15,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
@@ -64,13 +64,13 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 5*10**6
+step_tot = 1*10**7
 #check_steps = 10**2
 initial_check_steps = 10**3
 coarse_grained_step = 10**2
 log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu1e_1_N100.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu1e_2_N100.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
