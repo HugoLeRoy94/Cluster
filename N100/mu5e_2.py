@@ -21,7 +21,7 @@ from Time import Time
 # gillespie parameter
 Nlinker = 100
 ell_tot = 2*10**3
-kdiff = 0.001
+kdiff = 0.1
 Energy = -15
 
 
@@ -70,7 +70,7 @@ initial_check_steps = 10**4
 coarse_grained_step = 10**2
 log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N100.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N100_kdiff01.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
