@@ -1,3 +1,4 @@
 *.hdf
 *.ipynb
 logs/
+previous_organization_sim_res/
