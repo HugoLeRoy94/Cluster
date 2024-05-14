@@ -64,13 +64,13 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 1*10**7
+step_tot = 5*10**7
 #check_steps = 10**2
 initial_check_steps = 10**3
 coarse_grained_step = 10**2
 log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu1e_2_N100.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu1e_2_N100_kdiff1E_3.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
