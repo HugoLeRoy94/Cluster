@@ -37,6 +37,7 @@ EOF
 # Execute Python script and capture output into a Bash variable
 formatted_output=$(python3 -c "$FORMAT_SCRIPT")
 sbatch <<EOT
+#!/bin/bash
 #SBATCH --job-name="$formatted_output"
 #SBATCH --output=logs/${formatted_output}%j.txt
 #SBATCH --error=logs/$formatted_output%j.txt
