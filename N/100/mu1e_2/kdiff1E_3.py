@@ -6,6 +6,7 @@ import numpy as np
 import sys
 sys.path.append('/home/hcleroy/PostDoc/aging_condensates/Simulation/Parallel_Simulation')
 sys.path.append('/home/hcleroy/Parallel_gillespie')
+output_filename = sys.argv[1]
 
 media =""
 
@@ -20,7 +21,7 @@ from Time import Time
 
 # gillespie parameter
 Nlinker = 100
-ell_tot = 10**4
+ell_tot = 1*10**4
 kdiff = 0.001
 Energy = -15
 
@@ -66,11 +67,11 @@ measurement_flags = {
 # Simulation parameters
 step_tot = 5*10**7
 #check_steps = 10**2
-initial_check_steps = 10**3
+initial_check_steps = 10**4
 coarse_grained_step = 10**2
 log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu1e_2_N100_kdiff1E_3.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+output_filename+'.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
