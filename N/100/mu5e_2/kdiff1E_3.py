@@ -22,17 +22,16 @@ from Time import Time
 # gillespie parameter
 Nlinker = 100
 ell_tot = 2*10**3
-kdiff = 0.0001
+kdiff = 0.001
 Energy = -15
 
 
-Nprocess = 10
+Nprocess = 50
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
 seeds = list(seeds)
 args = [[ell_tot,Energy,kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
-
 
 avR = lambda L,N : 2*(np.exp(-1.5/(L/N)) * np.sqrt(L/N*6/np.pi)*(3+2*L/N) - 9*erfc(np.sqrt(3/2/(L/N))))/(9*L/N) #average distance between equilibrated nodes
 Lcharact = lambda L,N : (np.sqrt(2*L/N/3))
@@ -68,7 +67,7 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 10**8
+step_tot = 10**7
 #check_steps = 10**2
 initial_check_steps = 10**4
 coarse_grained_step = 10**2

@@ -33,10 +33,12 @@ while len(seeds) < Nprocess:
 seeds = list(seeds)
 args = [[ell_tot,Energy,kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
 
+avR = lambda L,N : 2*(np.exp(-1.5/(L/N)) * np.sqrt(L/N*6/np.pi)*(3+2*L/N) - 9*erfc(np.sqrt(3/2/(L/N))))/(9*L/N) #average distance between equilibrated nodes
+Lcharact = lambda L,N : (np.sqrt(2*L/N/3))
 # argument of the different classes
-cluster_arg = tuple([2.67]) # max distance
+cluster_arg = tuple([Lcharact(ell_tot,Nlinker)]) # max distance
 MSD_arg = () # no argument 
-ISF_arg = (0.374,10) # q_norm, q_num_sample
+ISF_arg = (1/avR(ell_tot,Nlinker),10) # q_norm, q_num_sample
 NRG_arg = ()
 PCF_arg = (15,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
