@@ -2,7 +2,7 @@
 import time
 start_time =  time.time()
 import numpy as np
-#from scipy.special import erfc
+from scipy.special import erfc
 import sys
 sys.path.append('/home/hcleroy/PostDoc/aging_condensates/Simulation/Parallel_Simulation')
 sys.path.append('/home/hcleroy/Parallel_gillespie')
