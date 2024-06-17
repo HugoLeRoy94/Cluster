@@ -26,7 +26,7 @@ kdiff = 0.001
 Energy = -15
 
 
-Nprocess = 50
+Nprocess = 10
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
@@ -67,11 +67,11 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 5*10**7
+step_tot = 1*10**5
 #check_steps = 10**2
 initial_check_steps = 10**4
 coarse_grained_step = 10**2
-log_base=2.
+log_base=None
 
 Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+output_filename+'.hdf',
                                 measurement_args,measurement_flags,log_base)
