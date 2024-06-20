@@ -23,7 +23,7 @@ from Time import Time
 Nlinker = 100
 ell_tot = 1*10**4
 kdiff = 0.001
-Energy = 0
+Energy = 1
 Eb = [1,0,-0.25,-0.5,-0.75,-1,-1.25,-1.5,-2,-3,-4,-5]
 
 
