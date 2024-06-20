@@ -23,7 +23,8 @@ from Time import Time
 Nlinker = 100
 ell_tot = 1*10**5
 kdiff = 0.001
-Energy = [1,0,-0.25,-0.5,-0.75,-1,-1.25,-1.5,-2,-3,-4,-5]
+Energy = 0
+Eb = [1,0,-0.25,-0.5,-0.75,-1,-1.25,-1.5,-2,-3,-4,-5]
 
 
 Nprocess = 12
@@ -33,7 +34,7 @@ while len(seeds) < Nprocess:
 seeds = list(seeds)
 
 
-args = [[ell_tot,Energy[_],kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
+args = [[ell_tot,Eb[_],kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
 
 # argument of the different classes
 avR = lambda L,N : 2*(np.exp(-1.5/(L/N)) * np.sqrt(L/N*6/np.pi)*(3+2*L/N) - 9*erfc(np.sqrt(3/2/(L/N))))/(9*L/N) #average distance between equilibrated nodes
