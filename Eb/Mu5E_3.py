@@ -23,15 +23,17 @@ from Time import Time
 Nlinker = 100
 ell_tot = 2*10**4
 kdiff = 0.001
-Energy = -15
+Energy = [1,0,-0.25,-0.5,-0.75,-1,-1.25,-1.5,-2,-3,-4,-5]
 
 
-Nprocess = 50
+Nprocess = 12
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
 seeds = list(seeds)
-args = [[ell_tot,Energy,kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
+
+
+args = [[ell_tot,Energy[_],kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
 
 # argument of the different classes
 avR = lambda L,N : 2*(np.exp(-1.5/(L/N)) * np.sqrt(L/N*6/np.pi)*(3+2*L/N) - 9*erfc(np.sqrt(3/2/(L/N))))/(9*L/N) #average distance between equilibrated nodes
@@ -67,7 +69,7 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 1*10**4
+step_tot = 5*10**4
 #check_steps = 10**2
 initial_check_steps = 10**1
 coarse_grained_step = 10**0
