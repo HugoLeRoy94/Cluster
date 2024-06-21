@@ -70,7 +70,7 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 5*10**4
+step_tot = 1*10**4
 #check_steps = 10**2
 initial_check_steps = 10**1
 coarse_grained_step = 10**0
