@@ -23,8 +23,10 @@ from Time import Time
 Nlinker = 100
 ell_tot = 1*10**3
 kdiff = 0.001
-Energy = 1.
-Eb = [1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+Energy = 1
+mu = Nlinker/ell_tot
+Eb = np.array([-1,-2,-3,-4,-4.33,-4.66,-5,-5.5,-6,-7,-8,-9])
+Eb = -Eb*np.log(mu)/np.log(10)
 
 
 Nprocess = 12
@@ -70,7 +72,7 @@ measurement_flags = {
 }
 
 # Simulation parameters
-step_tot = 1*10**4
+step_tot = 5*10**4
 #check_steps = 10**2
 initial_check_steps = 10**1
 coarse_grained_step = 10**0

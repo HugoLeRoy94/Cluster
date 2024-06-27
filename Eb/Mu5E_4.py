@@ -24,7 +24,10 @@ Nlinker = 100
 ell_tot = 2*10**5
 kdiff = 0.001
 Energy = 1
-Eb = [1,0,-0.25,-0.5,-0.75,-1,-1.25,-1.5,-2,-3,-4,-5]
+mu = Nlinker/ell_tot
+Eb = np.array([-1,-2,-3,-4,-4.33,-4.66,-5,-5.5,-6,-7,-8,-9])
+Eb = -Eb*np.log(mu)/np.log(10)
+
 
 
 Nprocess = 12
