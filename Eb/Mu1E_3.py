@@ -75,8 +75,8 @@ measurement_flags = {
 # Simulation parameters
 step_tot = 1*10**5
 #check_steps = 10**2
-initial_check_steps = 10**1
-coarse_grained_step = 10**0
+initial_check_steps = 10**2
+coarse_grained_step = 10**1
 log_base=None
 
 Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+output_filename+'.hdf',
