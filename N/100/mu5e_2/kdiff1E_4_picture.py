@@ -6,7 +6,7 @@ from scipy.special import erfc
 import sys
 sys.path.append('/home/hcleroy/PostDoc/aging_condensates/Simulation/Parallel_Simulation')
 sys.path.append('/home/hcleroy/Parallel_gillespie')
-output_filename = sys.argv[1]
+output_filename = 'picture_'+sys.argv[1]
 
 media =""
 
@@ -45,10 +45,9 @@ NRG_arg = ()
 PCF_arg = (15,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
 Picture_arg = ()
-Time_arg = ()
 
 measurement_args = {
-    'Picture': (Picture,Picture_arg)
+    'Picture': (Picture,Picture_arg),
     #'Cluster': (Cluster, cluster_arg),
     #'MSD': (MSD, MSD_arg),
     #'ISF': (ISF, ISF_arg),
@@ -66,7 +65,7 @@ measurement_flags = {
     'MSD': False,
     'ISF': False,
     'PCF':False,
-    'PCF_L':False#,
+    'PCF_L':False,
     #'Time':True
     # Set each measurement to True/False as desired
 }

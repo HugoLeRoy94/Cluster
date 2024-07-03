@@ -23,17 +23,16 @@ from Picture import Picture
 # gillespie parameter
 Nlinker = 100
 ell_tot = 2*10**3
-kdiff = 0.0001
+kdiff = 0.001
 Energy = -15
 
 
-Nprocess = 10
+Nprocess = 50
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
 seeds = list(seeds)
 args = [[ell_tot,Energy,kdiff,seeds[_],Nlinker,3] for _ in range(Nprocess)]
-
 
 avR = lambda L,N : 2*(np.exp(-1.5/(L/N)) * np.sqrt(L/N*6/np.pi)*(3+2*L/N) - 9*erfc(np.sqrt(3/2/(L/N))))/(9*L/N) #average distance between equilibrated nodes
 Lcharact = lambda L,N : (np.sqrt(2*L/N/3))
@@ -45,10 +44,9 @@ NRG_arg = ()
 PCF_arg = (15,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
 Picture_arg = ()
-Time_arg = ()
 
 measurement_args = {
-    'Picture': (Picture,Picture_arg)
+    'Picture': (Picture,Picture_arg),
     #'Cluster': (Cluster, cluster_arg),
     #'MSD': (MSD, MSD_arg),
     #'ISF': (ISF, ISF_arg),
@@ -66,13 +64,13 @@ measurement_flags = {
     'MSD': False,
     'ISF': False,
     'PCF':False,
-    'PCF_L':False#,
+    'PCF_L':False,
     #'Time':True
     # Set each measurement to True/False as desired
 }
 
 # Simulation parameters
-step_tot = 10**8
+step_tot = 10**7
 #check_steps = 10**2
 initial_check_steps = 10**4
 coarse_grained_step = 10**2
