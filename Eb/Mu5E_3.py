@@ -63,10 +63,10 @@ measurement_args = {
 
 measurement_flags = {
     'NRG':True,
-    'Cluster': True,
+    'Cluster': False,
     'MSD': False,
-    'ISF': True,
-    'PCF':True,
+    'ISF': False,
+    'PCF':False,
     'PCF_L':False#,
     #'Time':True
     # Set each measurement to True/False as desired
@@ -75,7 +75,7 @@ measurement_flags = {
 # Simulation parameters
 step_tot = 5*10**5
 #check_steps = 10**2
-initial_check_steps = 10**2
+initial_check_steps = 10**3
 coarse_grained_step = 10**1
 log_base=None
 

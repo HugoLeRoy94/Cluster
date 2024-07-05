@@ -65,9 +65,9 @@ measurement_flags = {
     'NRG':True,
     'Cluster': False,
     'MSD': False,
-    'ISF': True,
-    'PCF':True,
-    'PCF_L':False#,
+    'ISF': False,
+    'PCF': False,
+    'PCF_L': False#,
     #'Time':True
     # Set each measurement to True/False as desired
 }

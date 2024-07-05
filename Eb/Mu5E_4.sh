@@ -41,10 +41,10 @@ sbatch <<EOT
 #SBATCH --job-name="$formatted_output"
 #SBATCH --output=logs/${formatted_output}_output.txt
 #SBATCH --error=logs/${formatted_output}_error.txt
-#SBATCH --time=50:00:00
+#SBATCH --time=75:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
-#SBATCH --mem-per-cpu=1G
+#SBATCH --mem-per-cpu=2G
 
 # Load the module
 module load gcc python

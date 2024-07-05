@@ -44,7 +44,7 @@ sbatch <<EOT
 #SBATCH --time=50:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
-#SBATCH --mem-per-cpu=1G
+#SBATCH --mem-per-cpu=2G
 
 # Load the module
 module load gcc python
