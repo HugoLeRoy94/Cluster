@@ -28,7 +28,6 @@ nlinker_formatted = f"N{$Nlinker}"
 energy_formatted = f"E{$Energy}"
 ell_tot_formatted = f"ell{scientific_format(float($ell_tot))}"
 kdiff_formatted = f"kdiff{scientific_format(float($kdiff))}"
-seed_formatted = 
 
 result = f"{energy_formatted}_{nlinker_formatted}_{ell_tot_formatted}_{kdiff_formatted}_{$1}"
 print(result)
