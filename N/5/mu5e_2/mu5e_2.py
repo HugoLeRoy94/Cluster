@@ -25,7 +25,7 @@ kdiff = 0.001
 Energy = -15
 
 
-Nprocess = 500
+Nprocess = 10
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
@@ -66,7 +66,7 @@ measurement_flags = {
 # Simulation parameters
 step_tot = 10**5
 #check_steps = 10**2
-initial_check_steps = 10**4
+initial_check_steps = 10**3
 coarse_grained_step = 10**2
 log_base=2.
 
