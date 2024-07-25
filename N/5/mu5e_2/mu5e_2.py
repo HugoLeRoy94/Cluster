@@ -66,8 +66,8 @@ measurement_flags = {
 # Simulation parameters
 step_tot = 10**5
 #check_steps = 10**2
-initial_check_steps = 10**2
-coarse_grained_step = 10**1
+initial_check_steps = 10**1
+coarse_grained_step = 10**0
 log_base=2.
 
 Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N5_pcf_only.hdf',
