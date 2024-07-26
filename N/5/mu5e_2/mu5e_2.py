@@ -25,7 +25,7 @@ kdiff = 0.001
 Energy = -15
 
 
-Nprocess = 500
+Nprocess = 10
 seeds = set()
 while len(seeds) < Nprocess:
     seeds.add(np.random.randint(1000000))
