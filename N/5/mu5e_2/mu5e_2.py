@@ -37,7 +37,7 @@ cluster_arg = tuple([3.65]) # max distance #2.7
 MSD_arg = () # no argument 
 ISF_arg = (0.374,10) # q_norm, q_num_sample
 NRG_arg = ()
-PCF_arg = (15,50) # max_distance,numb_bin
+PCF_arg = (5,50) # max_distance,numb_bin
 PCF_L_arg = (ell_tot,30) # max_distance,numb_bin
 Time_arg = ()
 
@@ -70,7 +70,7 @@ initial_check_steps = 10**1
 coarse_grained_step = 10**0
 log_base=2.
 
-Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N5_pcf_only.hdf',
+Parallel_Run.parallel_evolution(args,step_tot,initial_check_steps,coarse_grained_step,media+'mu5e_2_N5_pcf_only_b.hdf',
                                 measurement_args,measurement_flags,log_base)
 
 
