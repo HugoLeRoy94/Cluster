@@ -14,6 +14,6 @@ module load gcc python
 source /home/hcleroy/venvs/base/bin/activate
 
 # Run your Python script
-srun python mu5e_2.py
+srun python mu5e_2.py $1
 
 deactivate
